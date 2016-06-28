@@ -6,7 +6,7 @@ moduleForAcceptance('Acceptance | homepage');
 test('should list prezis.', function (assert) {
   visit('/');
   andThen(function () {
-    assert.equal(find('.listing').length, 3, 'should see 3 prezis');
+    assert.equal(find('.listing').length, 100, 'should see 100 prezis');
   });
 });
 
@@ -15,7 +15,7 @@ test('should filter the list of prezis by title.', function (assert) {
   fillIn('.list-filter input', 'Lorem');
   keyEvent('.list-filter input', 'keyup', 69);
   andThen(function () {
-    assert.equal(find('.listing').length, 1, 'should show 1 listing');
-    assert.equal(find('.listing .title:contains("Lorem")').length, 1, 'should contain 1 listing with title including lorem');
+    assert.equal(find('.listing').length, 9, 'should show 9 listing');
+    assert.equal(find('.listing .title:contains("Lorem")').length, 9, 'should contain 9 listings with title including lorem');
   });
 });
