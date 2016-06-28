@@ -3,6 +3,12 @@
   <h2>Welcome!</h2>
 </div>
 
-{{#each model as |preziUnit|}}
-  {{prezi-listing prezi=preziUnit}}
-{{/each}}
+{{#list-filter
+  filter=(action 'filterByTitle')
+  as |prezis|}}
+  <ul class="results">
+    {{#each prezis as |preziUnit|}}
+      <li>{{prezi-listing prezi=preziUnit}}</li>
+    {{/each}}
+  </ul>
+{{/list-filter}}
