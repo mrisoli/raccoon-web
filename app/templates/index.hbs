@@ -1,14 +1,9 @@
-<div class="jumbo">
-  <div class="right tomster"></div>
-  <h2>Welcome!</h2>
-</div>
-
 {{#list-filter
   filter=(action 'filterByTitle')
   as |prezis|}}
-  <ul class="results">
+  <div class="results">
     {{#each prezis as |preziUnit|}}
-      <li>{{prezi-listing prezi=preziUnit}}</li>
+      <article class="listing">{{prezi-listing prezi=preziUnit}}</article>
     {{/each}}
-  </ul>
+  </div>
 {{/list-filter}}

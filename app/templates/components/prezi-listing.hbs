@@ -1,7 +1,14 @@
-<article class="listing">
-<h3>{{prezi.title}}</h3>
-<p>{{prezi.thumbnail}}</p>
-<p>{{prezi.creator.name}}</p>
-<p>{{prezi.creator.profileUrl}}</p>
-<p>{{prezi.createdAt}}</p>
-</article>
+<div class="medium-4 columns">
+  <div class="card">
+    <div class="image">
+      <img src={{prezi.thumbnail}}>
+      <span class="title">{{prezi.title}}</span>
+    </div>
+    <div class="content">
+      <p>I shall be telling this with a sigh. Somewhere ages and ages hence:hence Two roads diverged in a wood, and I —and I took the one less traveled by.by And that has made all the difference.</p>
+    </div>
+    <div class="action">
+      <a href={{prezi.creator.profileUrl}}>{{prezi.creator.name}}</a>
+    </div>
+  </div>
+</div>
