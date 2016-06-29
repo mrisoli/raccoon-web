@@ -1,5 +1,8 @@
 # Raccoon-web
 
+Raccoon-web is a simple responsive Ember application that fetches data from a JSON API and displays it in presentation form.
+It includes a simple search bar for filtering by title.
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
